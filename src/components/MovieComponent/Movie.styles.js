@@ -6,6 +6,11 @@ export const MovieTitle = Styled.Text`
     margin-bottom: 10px;
 `;
 
+export const MovieContentContainer = Styled.View`
+    background-color: #000000AA;
+    padding: 5px;
+`;
+
 export const MovieImage = Styled.ImageBackground`
     height: 200px;
     width: 100%;
