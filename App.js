@@ -1,22 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import MovieList from './components/moviesList';
+import {MovieListComponent} from './src/components/MovieListComponent';
+import {useMovies} from "./src/hooks/useMovies";
+import {AppContainer} from './App.styles';
 
-export default function App() {
+const App = () => {
+  const {loading, movies} = useMovies()
   return (
-    <View style={styles.container}>
-      <MovieList />
+    <AppContainer>
+      <MovieListComponent loading={loading} movies={movies} />
       <StatusBar style="auto" />
-    </View>
+    </AppContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
