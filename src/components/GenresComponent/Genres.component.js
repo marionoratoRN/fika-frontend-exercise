@@ -17,5 +17,5 @@ export const GenresComponent = ({genres}) => {
 }
 
 GenresComponent.propTypes = {
-    genres: PropTypes.shape({id: PropTypes.number.isRequired, name: PropTypes.string.isRequired}),
+    genres: PropTypes.arrayOf(PropTypes.shape({id: PropTypes.number.isRequired, name: PropTypes.string.isRequired})),
 }

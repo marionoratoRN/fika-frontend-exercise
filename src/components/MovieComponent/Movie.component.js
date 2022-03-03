@@ -18,5 +18,5 @@ export const MovieComponent = ({imageUrl, title, genres}) => {
 MovieComponent.propTypes = {
     imageUrl: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    genres: PropTypes.shape({id: PropTypes.number.isRequired, name: PropTypes.string.isRequired})
+    genres: PropTypes.arrayOf(PropTypes.shape({id: PropTypes.number.isRequired, name: PropTypes.string.isRequired})),
 }
