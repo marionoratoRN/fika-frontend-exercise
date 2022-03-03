@@ -32,7 +32,7 @@ export const MovieListComponent = ({movies, loading}) => {
 MovieListComponent.propTypes = {
     loading: PropTypes.bool.isRequired,
     movies: PropTypes.arrayOf(PropTypes.shape({
-        genres: PropTypes.shape({id: PropTypes.number.isRequired, name: PropTypes.string.isRequired}),
+        genres: PropTypes.arrayOf(PropTypes.shape({id: PropTypes.number.isRequired, name: PropTypes.string.isRequired})),
         id: PropTypes.number.isRequired,
         poster_path: PropTypes.string.isRequired,
         title: PropTypes.string
