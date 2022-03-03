@@ -23,7 +23,7 @@ export const MovieListComponent = ({movies, loading}) => {
           <FlatList
               data={movies}
               renderItem={renderItem}
-              keyExtractor={item => item.id}
+              keyExtractor={item => `${item.id}`}
           />
         </MovieListContainer>
     )
