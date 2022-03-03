@@ -7,7 +7,7 @@ export const GenresComponent = ({genres}) => {
         <GenresContainer>
             {genres.map((genre) => {
                 return (
-                    <GenreTagContainer>
+                    <GenreTagContainer id={genre.id}>
                         <GenreLabel>{genre.name}</GenreLabel>
                     </GenreTagContainer>
                 )
