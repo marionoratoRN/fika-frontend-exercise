@@ -14,7 +14,10 @@ export const MovieListComponent = ({movies, loading}) => {
         />
     );
 
-  if(!loading) {
+    if(loading){
+        return <ActivityIndicator />
+    }
+
     return (
         <MovieListContainer>
           <FlatList
@@ -24,9 +27,6 @@ export const MovieListComponent = ({movies, loading}) => {
           />
         </MovieListContainer>
     )
-  } else {
-    return <ActivityIndicator />
-  }
 }
 
 MovieListComponent.propTypes = {
